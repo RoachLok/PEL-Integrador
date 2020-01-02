@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define _MATLAB_ "matlab -nodesktop -nosplash -r "
+#define _MATLAB_ "matlab -nodesktop -nosplash -r \'untitled, exit\'"
 
 using namespace std;
 
