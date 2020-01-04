@@ -56,8 +56,29 @@ int PlanoConPlanoP2ContinuaX0, PlanoConPlanoP2ContinuaY0, PlanoConPlanoP2Continu
 int PlanoConPlanoP2ContinuaU1, PlanoConPlanoP2ContinuaU2, PlanoConPlanoP2ContinuaU3;
 
 int opTresPlanosPlano1;
+int TresPlanosP1ImplicitaA, TresPlanosP1ImplicitaB, TresPlanosP1ImplicitaC, TresPlanosP1ImplicitaD;
+int TresPlanosP1ParametricaX0, TresPlanosP1ParametricaY0,TresPlanosP1ParametricaZ0;
+int TresPlanosP1ParametricaU1, TresPlanosP1ParametricaU2, TresPlanosP1ParametricaU3;
+int TresPlanosP1VectorialX0, TresPlanosP1VectorialY0, TresPlanosP1VectorialZ0;
+int TresPlanosP1VectorialU1, TresPlanosP1VectorialU2, TresPlanosP1VectorialU3;
+int TresPlanosP1ContinuaX0, TresPlanosP1ContinuaY0, TresPlanosP1ContinuaZ0;
+int TresPlanosP1ContinuaU1, TresPlanosP1ContinuaU2, TresPlanosP1ContinuaU3;
 int opTresPlanosPlano2;
+int TresPlanosP2ImplicitaA, TresPlanosP2ImplicitaB, TresPlanosP2ImplicitaC, TresPlanosP2ImplicitaD;
+int TresPlanosP2ParametricaX0, TresPlanosP2ParametricaY0,TresPlanosP2ParametricaZ0;
+int TresPlanosP2ParametricaU1, TresPlanosP2ParametricaU2, TresPlanosP2ParametricaU3;
+int TresPlanosP2VectorialX0, TresPlanosP2VectorialY0, TresPlanosP2VectorialZ0;
+int TresPlanosP2VectorialU1, TresPlanosP2VectorialU2, TresPlanosP2VectorialU3;
+int TresPlanosP2ContinuaX0, TresPlanosP2ContinuaY0, TresPlanosP2ContinuaZ0;
+int TresPlanosP2ContinuaU1, TresPlanosP2ContinuaU2, TresPlanosP2ContinuaU3;
 int opTresPlanosPlano3;
+int TresPlanosP3ImplicitaA, TresPlanosP3ImplicitaB, TresPlanosP3ImplicitaC, TresPlanosP3ImplicitaD;
+int TresPlanosP3ParametricaX0, TresPlanosP3ParametricaY0,TresPlanosP3ParametricaZ0;
+int TresPlanosP3ParametricaU1, TresPlanosP3ParametricaU2, TresPlanosP3ParametricaU3;
+int TresPlanosP3VectorialX0, TresPlanosP3VectorialY0, TresPlanosP3VectorialZ0;
+int TresPlanosP3VectorialU1, TresPlanosP3VectorialU2, TresPlanosP3VectorialU3;
+int TresPlanosP3ContinuaX0, TresPlanosP3ContinuaY0, TresPlanosP3ContinuaZ0;
+int TresPlanosP3ContinuaU1, TresPlanosP3ContinuaU2, TresPlanosP3ContinuaU3;
 
 
 int main() {
@@ -578,7 +599,7 @@ int main() {
 
 
     }else if(op==4){
-        cout << "\t\tElija que tipo de ecuación quiere usar en tres planos\n ";
+        cout << "\t\tElija que tipo de ecuación que quiere usar en tres planos\n ";
         cout << "\t\tPlano 1:\n";
         cout << "\t\t1.- Implícita" << endl << endl;
         cout << "\t\t2.- Paramétrica"<< endl << endl;
@@ -586,14 +607,81 @@ int main() {
         cout << "\t\t4.- Continua"<< endl << endl;
         cin>>opTresPlanosPlano1;
         if(opTresPlanosPlano1==1){
+            cout << "\t\tLa ecuacion es: Ax + By + Cz + D = 0\n ";
+            cout << "\t\tIntroduzca el valor de A: \n ";
+            cin>>TresPlanosP1ImplicitaA;
+            cout << "\t\tIntroduzca el valor de B: \n ";
+            cin>>TresPlanosP1ImplicitaB;
+            cout << "\t\tIntroduzca el valor de C: \n ";
+            cin>>TresPlanosP1ImplicitaC;
+            cout << "\t\tIntroduzca el valor de D: \n ";
+            cin>>TresPlanosP1ImplicitaD;
+            //TODO METODO
 
 
 
         }else if(opTresPlanosPlano1==2){
+            cout << "\t\tLa ecuacion es: ";
+            cout << "\t\tx = x0 + λu1";
+            cout << "\t\ty = y0 + λu2";
+            cout << "\t\tz = z0 + λu3";
+            cout << "\t\tIntroduzca el valor del punto x0: \n ";
+            cin>>TresPlanosP1ParametricaX0;
+            cout << "\t\tIntroduzca el valor del punto y0: \n ";
+            cin>>TresPlanosP1ParametricaY0;
+            cout << "\t\tIntroduzca el valor del punto z0: \n ";
+            cin>>TresPlanosP1ParametricaZ0;
+
+            cout << "\t\tIntroduzca el valor del vector director u1: \n ";
+            cin>>TresPlanosP1ParametricaU1;
+            cout << "\t\tIntroduzca el valor del vector director u2: \n ";
+            cin>>TresPlanosP1ParametricaU2;
+            cout << "\t\tIntroduzca el valor del vector director u3: \n ";
+            cin>>TresPlanosP1ParametricaU3;
+            //TODO METODO
+
 
         }else if(opTresPlanosPlano1==3){
+            cout << "\t\tLa ecuacion es: (x,y,z) = (x0,y0,z0) + λ(u1,u2,u3)";
+            cout << "\t\tDonde (x0,y0,z0) son los valores de un punto del plano";
+            cout << "\t\tλ es un parametro";
+            cout << "\t\tY (u1,u2,u3) es el vector director del plano\"";
+
+            cout << "\t\tIntroduzca el valor del punto x0: \n ";
+            cin>>TresPlanosP1VectorialX0;
+            cout << "\t\tIntroduzca el valor del punto y0: \n ";
+            cin>>TresPlanosP1VectorialY0;
+            cout << "\t\tIntroduzca el valor del punto z0: \n ";
+            cin>>TresPlanosP1VectorialZ0;
+
+            cout << "\t\tIntroduzca el valor del vector director u1: \n ";
+            cin>>TresPlanosP1VectorialU1;
+            cout << "\t\tIntroduzca el valor del vector director u2: \n ";
+            cin>>TresPlanosP1VectorialU2;
+            cout << "\t\tIntroduzca el valor del vector director u3: \n ";
+            cin>>TresPlanosP1VectorialU3;
+            //TODO METODO
 
         }else if(opTresPlanosPlano1==4){
+            cout << "\t\tLa ecuacion es: (x - x0)/u1 = (y - y0)/u2 = (z - z0)/u3";
+            cout << "\t\tDonde (x0,y0,z0) son los valores de un punto del plano";
+            cout << "\t\tY (u1,u2,u3) es el vector director del plano\"";
+
+            cout << "\t\tIntroduzca el valor del punto x0: \n ";
+            cin>>TresPlanosP1ContinuaX0;
+            cout << "\t\tIntroduzca el valor del punto y0: \n ";
+            cin>>TresPlanosP1ContinuaY0;
+            cout << "\t\tIntroduzca el valor del punto z0: \n ";
+            cin>>TresPlanosP1ContinuaZ0;
+
+            cout << "\t\tIntroduzca el valor del vector director u1: \n ";
+            cin>>TresPlanosP1ContinuaU1;
+            cout << "\t\tIntroduzca el valor del vector director u2: \n ";
+            cin>>TresPlanosP1ContinuaU2;
+            cout << "\t\tIntroduzca el valor del vector director u3: \n ";
+            cin>>TresPlanosP1ContinuaU3;
+            //TODO METODO
+
 
         }
         cout << "\t\tPlano 2:\n";
@@ -603,12 +691,77 @@ int main() {
         cout << "\t\t4.- Continua"<< endl << endl;
         cin>>opTresPlanosPlano2;
         if(opTresPlanosPlano2==1){
+            cout << "\t\tLa ecuacion es: Ax + By + Cz + D = 0\n ";
+            cout << "\t\tIntroduzca el valor de A: \n ";
+            cin>>TresPlanosP2ImplicitaA;
+            cout << "\t\tIntroduzca el valor de B: \n ";
+            cin>>TresPlanosP2ImplicitaB;
+            cout << "\t\tIntroduzca el valor de C: \n ";
+            cin>>TresPlanosP2ImplicitaC;
+            cout << "\t\tIntroduzca el valor de D: \n ";
+            cin>>TresPlanosP2ImplicitaD;
+            //TODO METODO
 
         }else if(opTresPlanosPlano2==2){
+            cout << "\t\tLa ecuacion es: ";
+            cout << "\t\tx = x0 + λu1";
+            cout << "\t\ty = y0 + λu2";
+            cout << "\t\tz = z0 + λu3";
+            cout << "\t\tIntroduzca el valor del punto x0: \n ";
+            cin>>TresPlanosP2ParametricaX0;
+            cout << "\t\tIntroduzca el valor del punto y0: \n ";
+            cin>>TresPlanosP2ParametricaY0;
+            cout << "\t\tIntroduzca el valor del punto z0: \n ";
+            cin>>TresPlanosP2ParametricaZ0;
+
+            cout << "\t\tIntroduzca el valor del vector director u1: \n ";
+            cin>>TresPlanosP2ParametricaU1;
+            cout << "\t\tIntroduzca el valor del vector director u2: \n ";
+            cin>>TresPlanosP2ParametricaU2;
+            cout << "\t\tIntroduzca el valor del vector director u3: \n ";
+            cin>>TresPlanosP2ParametricaU3;
+            //TODO METODO
 
         }else if(opTresPlanosPlano2==3){
+            cout << "\t\tLa ecuacion es: (x,y,z) = (x0,y0,z0) + λ(u1,u2,u3)";
+            cout << "\t\tDonde (x0,y0,z0) son los valores de un punto del plano";
+            cout << "\t\tλ es un parametro";
+            cout << "\t\tY (u1,u2,u3) es el vector director del plano\"";
+
+            cout << "\t\tIntroduzca el valor del punto x0: \n ";
+            cin>>TresPlanosP2VectorialX0;
+            cout << "\t\tIntroduzca el valor del punto y0: \n ";
+            cin>>TresPlanosP2VectorialY0;
+            cout << "\t\tIntroduzca el valor del punto z0: \n ";
+            cin>>TresPlanosP2VectorialZ0;
+
+            cout << "\t\tIntroduzca el valor del vector director u1: \n ";
+            cin>>TresPlanosP2VectorialU1;
+            cout << "\t\tIntroduzca el valor del vector director u2: \n ";
+            cin>>TresPlanosP2VectorialU2;
+            cout << "\t\tIntroduzca el valor del vector director u3: \n ";
+            cin>>TresPlanosP2VectorialU3;
+            //TODO METODO
 
         }else if(opTresPlanosPlano2==4){
+            cout << "\t\tLa ecuacion es: (x - x0)/u1 = (y - y0)/u2 = (z - z0)/u3";
+            cout << "\t\tDonde (x0,y0,z0) son los valores de un punto del plano";
+            cout << "\t\tY (u1,u2,u3) es el vector director del plano\"";
+
+            cout << "\t\tIntroduzca el valor del punto x0: \n ";
+            cin>>TresPlanosP2ContinuaX0;
+            cout << "\t\tIntroduzca el valor del punto y0: \n ";
+            cin>>TresPlanosP2ContinuaY0;
+            cout << "\t\tIntroduzca el valor del punto z0: \n ";
+            cin>>TresPlanosP2ContinuaZ0;
+
+            cout << "\t\tIntroduzca el valor del vector director u1: \n ";
+            cin>>TresPlanosP2ContinuaU1;
+            cout << "\t\tIntroduzca el valor del vector director u2: \n ";
+            cin>>TresPlanosP2ContinuaU2;
+            cout << "\t\tIntroduzca el valor del vector director u3: \n ";
+            cin>>TresPlanosP2ContinuaU3;
+            //TODO METODO
 
         }
         cout << "\t\tPlano 3:\n";
@@ -618,20 +771,81 @@ int main() {
         cout << "\t\t4.- Continua"<< endl << endl;
         cin>>opTresPlanosPlano3;
         if(opTresPlanosPlano3==1){
+            cout << "\t\tLa ecuacion es: Ax + By + Cz + D = 0\n ";
+            cout << "\t\tIntroduzca el valor de A: \n ";
+            cin>>TresPlanosP3ImplicitaA;
+            cout << "\t\tIntroduzca el valor de B: \n ";
+            cin>>TresPlanosP3ImplicitaB;
+            cout << "\t\tIntroduzca el valor de C: \n ";
+            cin>>TresPlanosP3ImplicitaC;
+            cout << "\t\tIntroduzca el valor de D: \n ";
+            cin>>TresPlanosP3ImplicitaD;
+            //TODO METODO
 
         }else if(opTresPlanosPlano3==2){
+            cout << "\t\tLa ecuacion es: ";
+            cout << "\t\tx = x0 + λu1";
+            cout << "\t\ty = y0 + λu2";
+            cout << "\t\tz = z0 + λu3";
+            cout << "\t\tIntroduzca el valor del punto x0: \n ";
+            cin>>TresPlanosP3ParametricaX0;
+            cout << "\t\tIntroduzca el valor del punto y0: \n ";
+            cin>>TresPlanosP3ParametricaY0;
+            cout << "\t\tIntroduzca el valor del punto z0: \n ";
+            cin>>TresPlanosP3ParametricaZ0;
+
+            cout << "\t\tIntroduzca el valor del vector director u1: \n ";
+            cin>>TresPlanosP3ParametricaU1;
+            cout << "\t\tIntroduzca el valor del vector director u2: \n ";
+            cin>>TresPlanosP3ParametricaU2;
+            cout << "\t\tIntroduzca el valor del vector director u3: \n ";
+            cin>>TresPlanosP3ParametricaU3;
+            //TODO METODO
 
         }else if(opTresPlanosPlano3==3){
+            cout << "\t\tLa ecuacion es: (x,y,z) = (x0,y0,z0) + λ(u1,u2,u3)";
+            cout << "\t\tDonde (x0,y0,z0) son los valores de un punto del plano";
+            cout << "\t\tλ es un parametro";
+            cout << "\t\tY (u1,u2,u3) es el vector director del plano\"";
+
+            cout << "\t\tIntroduzca el valor del punto x0: \n ";
+            cin>>TresPlanosP3VectorialX0;
+            cout << "\t\tIntroduzca el valor del punto y0: \n ";
+            cin>>TresPlanosP3VectorialY0;
+            cout << "\t\tIntroduzca el valor del punto z0: \n ";
+            cin>>TresPlanosP3VectorialZ0;
+
+            cout << "\t\tIntroduzca el valor del vector director u1: \n ";
+            cin>>TresPlanosP3VectorialU1;
+            cout << "\t\tIntroduzca el valor del vector director u2: \n ";
+            cin>>TresPlanosP3VectorialU2;
+            cout << "\t\tIntroduzca el valor del vector director u3: \n ";
+            cin>>TresPlanosP3VectorialU3;
+            //TODO METODO
 
         }else if(opTresPlanosPlano3==4){
+            cout << "\t\tLa ecuacion es: (x - x0)/u1 = (y - y0)/u2 = (z - z0)/u3";
+            cout << "\t\tDonde (x0,y0,z0) son los valores de un punto del plano";
+            cout << "\t\tY (u1,u2,u3) es el vector director del plano\"";
+
+            cout << "\t\tIntroduzca el valor del punto x0: \n ";
+            cin>>TresPlanosP3ContinuaX0;
+            cout << "\t\tIntroduzca el valor del punto y0: \n ";
+            cin>>TresPlanosP3ContinuaY0;
+            cout << "\t\tIntroduzca el valor del punto z0: \n ";
+            cin>>TresPlanosP3ContinuaZ0;
+
+            cout << "\t\tIntroduzca el valor del vector director u1: \n ";
+            cin>>TresPlanosP3ContinuaU1;
+            cout << "\t\tIntroduzca el valor del vector director u2: \n ";
+            cin>>TresPlanosP3ContinuaU2;
+            cout << "\t\tIntroduzca el valor del vector director u3: \n ";
+            cin>>TresPlanosP3ContinuaU3;
+            //TODO METODO
 
         }
 
     }
-
-
     
-
-
     return 0;
 }
