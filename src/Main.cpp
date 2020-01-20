@@ -58,19 +58,14 @@ void twoLine(std::string row1, std::string row2, std::string row3, std::string s
     CALL_MATLAB;
 }
 
-void linePlane(std::string row1, std::string row2, std::string row3, std::string sub1, std::string sub2, std::string sub3,
-                std::string p1, std::string p2, std::string p3, std::string p12, std::string p22, std::string p32)
+void linePlane(std::string p, std::string v, std::string impli)
 {
     std::ofstream outputFile("tempScript.m");
-    std::ifstream inputFile("matlab-scripts/twoLine.m");
+    std::ifstream inputFile("matlab-scripts/linePlane.m");
     std::string tempString;
 
-    outputFile << "m = [" + row1 + ';' + row2 + ';' + row3 + "];\n";
-    outputFile << "M = [" + row1 + ' ' + sub1 + ';' + row2 + ' ' + sub2 + ';' + row3 + ' ' + sub3 + "];\n";
-
-    outputFile << "v1 = [" + p1 + ',' + p2 + ',' + p3 + "];\n";
-    outputFile << "v12 = [" + p12 + ',' + p22 + ',' + p32 + "];\n";
-
+    outputFile << "n = [" + impli +"];";
+    outputFile << "r = [" + p + ';' + v + "];";
 
     outputFile << inputFile.rdbuf();
 
@@ -95,19 +90,15 @@ void twoPlane(std::string nor1, std::string nor2, std::string impli1, std::strin
     CALL_MATLAB;
 }
 
-void threePlane(std::string row1, std::string row2, std::string row3, std::string sub1, std::string sub2, std::string sub3,
-                std::string p1, std::string p2, std::string p3, std::string p12, std::string p22, std::string p32)
+void triPlane(std::string nor1, std::string nor2, std::string nor3,
+                    std::string impli1, std::string impli2, std::string impli3)
 {
     std::ofstream outputFile("tempScript.m");
-    std::ifstream inputFile("matlab-scripts/twoLine.m");
+    std::ifstream inputFile("matlab-scripts/triPlane.m");
     std::string tempString;
 
-    outputFile << "m = [" + row1 + ';' + row2 + ';' + row3 + "];\n";
-    outputFile << "M = [" + row1 + ' ' + sub1 + ';' + row2 + ' ' + sub2 + ';' + row3 + ' ' + sub3 + "];\n";
-
-    outputFile << "v1 = [" + p1 + ',' + p2 + ',' + p3 + "];\n";
-    outputFile << "v12 = [" + p12 + ',' + p22 + ',' + p32 + "];\n";
-
+    outputFile << "m = [" + nor1 + ';' + nor2 + ';' + nor3 + "];\n";
+    outputFile << "v1 = [" + impli1 + ',' + impli2 + ',' + impli3 + "];\n";
 
     outputFile << inputFile.rdbuf();
 
@@ -206,16 +197,18 @@ int main()
                                                     p2Box->getText()    .toAnsiString() + ' ' +
                                                     p3Box->getText()    .toAnsiString() + ' ' ;
 
-                                        std::string lamVec  =
+                                        std::string v       =
                                                     lambdBox1->getText().toAnsiString() + ' ' +
                                                     lambdBox2->getText().toAnsiString() + ' ' +
                                                     lambdBox3->getText().toAnsiString() + ' ' ;
 
-                                        std::string imPli   =
+                                        std::string impli   =
                                                     aBox->getText()     .toAnsiString() + ' ' +
                                                     bBox->getText()     .toAnsiString() + ' ' +
                                                     cBox->getText()     .toAnsiString() + ' ' +
                                                     dBox->getText()     .toAnsiString() + ' ' ;
+
+                                        linePlane(p, v, impli);
 
                                         break;
                                     }
@@ -268,24 +261,34 @@ int main()
                                         FIELD_FROM_WINDOW(c3Box     , "c''Box"      );
                                         FIELD_FROM_WINDOW(d3Box     , "d''Box"      );
 
-                                        std::string imPli   =
+                                        std::string nor1    =
                                                     aBox->getText()     .toAnsiString() + ' ' +
                                                     bBox->getText()     .toAnsiString() + ' ' +
-                                                    cBox->getText()     .toAnsiString() + ' ' +
+                                                    cBox->getText()     .toAnsiString() + ' ' ;
+
+                                        std::string impli1  =
+                                                    nor1 +
                                                     dBox->getText()     .toAnsiString() + ' ' ;
 
-                                        std::string imPli2  =
+                                        std::string nor2    =
                                                     a2Box->getText()    .toAnsiString() + ' ' +
                                                     b2Box->getText()    .toAnsiString() + ' ' +
-                                                    c2Box->getText()    .toAnsiString() + ' ' +
+                                                    c2Box->getText()    .toAnsiString() + ' ' ;
+
+                                        std::string impli2  =
+                                                    nor2 +
                                                     d2Box->getText()    .toAnsiString() + ' ' ;
 
-                                        std::string imPli3  =
+                                        std::string nor3    =
                                                     a3Box->getText()    .toAnsiString() + ' ' +
                                                     b3Box->getText()    .toAnsiString() + ' ' +
-                                                    c3Box->getText()    .toAnsiString() + ' ' +
+                                                    c3Box->getText()    .toAnsiString() + ' ' ;
+
+                                        std::string impli3  =
+                                                    nor3 +
                                                     d3Box->getText()    .toAnsiString() + ' ' ;
 
+                                        triPlane(nor1, nor2, nor3, impli1, impli2, impli3);
                                         break;
                                     }
                                     default:

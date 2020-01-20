@@ -288,7 +288,7 @@ Label."p1'Label" {
 EditBox."p'Box1" {
     Position = (480, 230);
     Size = (33.4, 24);
-    TextSize = 13;
+    TextSize = 15;
     renderer = &5;
 }
 
@@ -336,8 +336,8 @@ Label.Label7 {
     renderer = &6;
 }
 
-EditBox.muBox3 {
-    Position = (660, 320);
+EditBox.muBox1 {
+    Position = (480, 320);
     Size = (33.4, 24);
     TextSize = 15;
     renderer = &5;
@@ -350,8 +350,8 @@ EditBox.muBox2 {
     renderer = &5;
 }
 
-EditBox.muBox1 {
-    Position = (480, 320);
+EditBox.muBox3 {
+    Position = (660, 320);
     Size = (33.4, 24);
     TextSize = 15;
     renderer = &5;

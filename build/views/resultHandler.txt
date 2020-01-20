@@ -17,6 +17,7 @@ Panel.body {
     }
 
     Label.resultLabel {
+	HorizontalAlignment = Center;
         Position = (190, 30);
         ScrollbarPolicy = Never;
         Size = (493, 33);
