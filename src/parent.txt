@@ -1,0 +1,78 @@
+ComboBox.comboBox {
+    ChangeItemOnScroll = true;
+    ExpandDirection = Down;
+    Items = ["Recta - Recta", "Recta - Plano", "Plano - Plano", "Plano - Plano - Plano"];
+    ItemsToDisplay = 4;
+    MaximumItems = 4;
+    Position = (300, 20);
+    Size = (200, 27.5);
+    TextSize = 15;
+
+    Renderer {
+        backgroundcolor = rgb(210, 210, 210);
+        bordercolor = White;
+        borders = (2, 2, 2, 2);
+        textcolor = rgb(100, 100, 100);
+        texturearrow = "themes/BabyBlue.png" Part(177, 2, 20, 26);
+        texturearrowhover = None;
+        texturebackground = None;
+
+        listbox {
+            backgroundcolor = rgb(210, 210, 210);
+            bordercolor = White;
+            borders = (2, 2, 2, 2);
+            selectedbackgroundcolor = rgb(190, 225, 235);
+            selectedtextcolor = rgb(150, 150, 150);
+            textcolor = rgb(100, 100, 100);
+
+            scrollbar {
+                texturearrowdown = "themes/BabyBlue.png" Part(20, 2, 16, 16);
+                texturearrowup = "themes/BabyBlue.png" Part(2, 2, 16, 16);
+                texturethumb = "themes/BabyBlue.png" Part(414, 2, 16, 32);
+                texturetrack = "themes/BabyBlue.png" Part(432, 2, 16, 32);
+            }
+        }
+    }
+}
+
+Panel.body {
+    Position = (20, 80);
+    Size = (760, 430);
+
+    Renderer {
+        backgroundcolor = rgb(230, 230, 230);
+        texturebackground = None;
+    }
+}
+
+Button.runButton {
+    Position = (230, 525.333);
+    Size = (100, 36.6667);
+    Text = Lanzar;
+    TextSize = 13;
+
+    Renderer {
+        textcolor = rgb(100, 100, 100);
+        texture = "themes/BabyBlue.png" Part(269, 40, 90, 60) Middle(30, 0, 30, 60);
+        texturedisabled = None;
+        texturedown = "themes/BabyBlue.png" Part(177, 40, 90, 60) Middle(30, 0, 30, 60);
+        texturefocused = None;
+        texturehover = "themes/BabyBlue.png" Part(361, 40, 90, 60) Middle(30, 0, 30, 60);
+    }
+}
+
+Button.cancelButton {
+    Position = (480, 525.333);
+    Size = (100, 36.6667);
+    Text = Cancelar;
+    TextSize = 13;
+
+    Renderer {
+        textcolor = rgb(100, 100, 100);
+        texture = "themes/BabyBlue.png" Part(269, 40, 90, 60) Middle(30, 0, 30, 60);
+        texturedisabled = None;
+        texturedown = "themes/BabyBlue.png" Part(177, 40, 90, 60) Middle(30, 0, 30, 60);
+        texturefocused = None;
+        texturehover = "themes/BabyBlue.png" Part(361, 40, 90, 60) Middle(30, 0, 30, 60);
+    }
+}

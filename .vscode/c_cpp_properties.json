@@ -1,0 +1,27 @@
+{
+	"configurations": [
+		{
+			"name": "Win32",
+			"intelliSenseMode": "gcc-x64",
+			"compilerPath": "C:/MinGW/bin/gcc.exe",
+			"includePath": [
+				"${workspaceFolder}/src",
+				"${workspaceFolder}/lib",
+				"${workspaceFolder}/test",
+				"D:/SFML-2.5.1/include",
+				"C:/TGUI-0.8/include"
+			],
+			"defines": [
+				"_DEBUG",
+				"UNICODE",
+				"_UNICODE"
+			],
+			"cStandard": "c11",
+			"cppStandard": "c++17",
+			"forcedInclude": [
+				"${workspaceFolder}/src/PCH.hpp"
+			]
+		}
+	],
+	"version": 4
+}

@@ -1,0 +1,303 @@
+Renderer.1 {
+    backgroundcolor = #F5F5F5;
+    backgroundcolordisabled = #E6E6E6;
+    backgroundcolorhover = white;
+    bordercolor = #3C3C3C;
+    bordercolordisabled = #7D7D7D;
+    bordercolorhover = black;
+    borders = (1, 1, 1, 1);
+    caretcolor = black;
+    caretwidth = 1;
+    defaulttextcolor = #A0A0A0;
+    padding = (0, 0, 0, 0);
+    selectedtextbackgroundcolor = #006EFF;
+    selectedtextcolor = white;
+    textcolor = #3C3C3C;
+    textcolordisabled = #7D7D7D;
+    texture = None;
+    texturedisabled = None;
+    texturefocused = None;
+    texturehover = None;
+}
+
+Renderer.2 {
+    backgroundcolor = transparent;
+    bordercolor = #3C3C3C;
+    borders = (0, 0, 0, 0);
+    textcolor = #3C3C3C;
+    texturebackground = None;
+}
+
+Renderer.3 {
+    backgroundcolor = transparent;
+    bordercolor = #3C3C3C;
+    borders = (0, 0, 0, 0);
+    textcolor = #3C3C3C;
+    texturebackground = None;
+}
+
+Renderer.4 {
+    backgroundcolor = #F5F5F5;
+    backgroundcolordisabled = #E6E6E6;
+    backgroundcolorhover = white;
+    bordercolor = #3C3C3C;
+    bordercolordisabled = #7D7D7D;
+    bordercolorhover = black;
+    borders = (1, 1, 1, 1);
+    caretcolor = black;
+    caretwidth = 1;
+    defaulttextcolor = #A0A0A0;
+    padding = (0, 0, 0, 0);
+    selectedtextbackgroundcolor = #006EFF;
+    selectedtextcolor = white;
+    textcolor = #3C3C3C;
+    textcolordisabled = #7D7D7D;
+    texture = None;
+    texturedisabled = None;
+    texturefocused = None;
+    texturehover = None;
+}
+
+Picture.Picture1 {
+    Position = (220, 60);
+    Size = (329, 95);
+
+    Renderer {
+        texture = "img/3plano.png";
+        transparenttexture = false;
+    }
+}
+
+Label.Label1 {
+    AutoSize = true;
+    Position = (30, 20);
+    ScrollbarPolicy = Never;
+    Size = (703.2, 18);
+    Text = "======================================================================";
+    TextSize = 13;
+    renderer = &2;
+}
+
+Label.Label2 {
+    AutoSize = true;
+    Position = (30, 180);
+    ScrollbarPolicy = Never;
+    Size = (703.2, 18);
+    Text = "======================================================================";
+    TextSize = 13;
+    renderer = &2;
+}
+
+Label.p1Label {
+    AutoSize = true;
+    Position = (50, 230);
+    ScrollbarPolicy = Never;
+    Size = (22.4, 24);
+    Text = "A:";
+    TextSize = 18;
+    renderer = &2;
+}
+
+Label.p3Label {
+    AutoSize = true;
+    Position = (210, 230);
+    ScrollbarPolicy = Never;
+    Size = (22.4, 24);
+    Text = "C:";
+    TextSize = 18;
+    renderer = &2;
+}
+
+Label.p2Label {
+    AutoSize = true;
+    Position = (130, 230);
+    ScrollbarPolicy = Never;
+    Size = (22.4, 24);
+    Text = "B:";
+    TextSize = 18;
+    renderer = &2;
+}
+
+EditBox.aBox {
+    Position = (80, 230);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &1;
+}
+
+EditBox.bBox {
+    Position = (160, 230);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &1;
+}
+
+EditBox.cBox {
+    Position = (240, 230);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &1;
+}
+
+Label.Label4 {
+    AutoSize = true;
+    Position = (290, 230);
+    ScrollbarPolicy = Never;
+    Size = (24.4, 24);
+    Text = "D:";
+    TextSize = 18;
+    renderer = &2;
+}
+
+EditBox.dBox {
+    Position = (320, 230);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &1;
+}
+
+Label.Label3 {
+    AutoSize = true;
+    Position = (30, 380);
+    ScrollbarPolicy = Never;
+    Size = (703.2, 18);
+    Text = "======================================================================";
+    TextSize = 13;
+    renderer = &2;
+}
+
+Label."p1'Label" {
+    AutoSize = true;
+    Position = (410, 230);
+    ScrollbarPolicy = Never;
+    Size = (27.4, 24);
+    Text = "A':";
+    TextSize = 18;
+    renderer = &2;
+}
+
+EditBox."a'Box" {
+    Position = (440, 230);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &1;
+}
+
+Label.Label8 {
+    AutoSize = true;
+    Position = (490, 230);
+    ScrollbarPolicy = Never;
+    Size = (27.4, 24);
+    Text = "B':";
+    TextSize = 18;
+    renderer = &2;
+}
+
+EditBox."b'Box" {
+    Position = (520, 230);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &1;
+}
+
+Label.Label9 {
+    AutoSize = true;
+    Position = (570, 230);
+    ScrollbarPolicy = Never;
+    Size = (27.4, 24);
+    Text = "C':";
+    TextSize = 18;
+    renderer = &2;
+}
+
+EditBox."c'Box" {
+    Position = (600, 230);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &1;
+}
+
+EditBox."d'Box" {
+    Position = (680, 230);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &1;
+}
+
+Label.Label10 {
+    AutoSize = true;
+    Position = (650, 230);
+    ScrollbarPolicy = Never;
+    Size = (29.4, 24);
+    Text = "D':";
+    TextSize = 18;
+    renderer = &2;
+}
+
+Label.Label6 {
+    AutoSize = true;
+    Position = (480, 320);
+    ScrollbarPolicy = Never;
+    Size = (34.4, 24);
+    Text = "D'':";
+    TextSize = 18;
+    renderer = &3;
+}
+
+Label.Label7 {
+    AutoSize = true;
+    Position = (390, 320);
+    ScrollbarPolicy = Never;
+    Size = (32.4, 24);
+    Text = "C'':";
+    TextSize = 18;
+    renderer = &3;
+}
+
+Label.Label11 {
+    AutoSize = true;
+    Position = (300, 320);
+    ScrollbarPolicy = Never;
+    Size = (32.4, 24);
+    Text = "B'':";
+    TextSize = 18;
+    renderer = &3;
+}
+
+Label.Label12 {
+    AutoSize = true;
+    Position = (210, 320);
+    ScrollbarPolicy = Never;
+    Size = (32.4, 24);
+    Text = "A'':";
+    TextSize = 18;
+    renderer = &3;
+}
+
+EditBox."a''Box" {
+    Position = (250, 320);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &4;
+}
+
+EditBox."b''Box" {
+    Position = (340, 320);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &4;
+}
+
+EditBox."c''Box" {
+    Position = (430, 320);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &4;
+}
+
+EditBox."d''Box" {
+    Position = (520, 320);
+    Size = (33.4, 24);
+    TextSize = 15;
+    renderer = &4;
+}
