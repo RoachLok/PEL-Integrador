@@ -98,7 +98,7 @@ void triPlane(std::string nor1, std::string nor2, std::string nor3,
     std::string tempString;
 
     outputFile << "m = [" + nor1 + ';' + nor2 + ';' + nor3 + "];\n";
-    outputFile << "M = [" + impli1 + ',' + impli2 + ',' + impli3 + "];\n";
+    outputFile << "M = [" + impli1 + ';' + impli2 + ';' + impli3 + "];\n";
 
     outputFile << inputFile.rdbuf();
 

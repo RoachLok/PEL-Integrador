@@ -29,7 +29,7 @@ switch asses
             system("exit");
         else
             %PARALEL
-            system("./resultHandler.exe 1 2 3 Las_ rectas_ son_ paralelas 7 8 9 &");
+            system("./resultHandler.exe 1 2 3 Las_ rectas_ son_pa ralelas 7 8 9 &");
             system("exit");
         end
     case 1
